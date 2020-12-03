@@ -37,3 +37,12 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure for Students(95738aeb-f6f0-4d14-b7be-d03aeb6588f1)'
+    appType: 'webAppContainer'
+    WebAppName: 'joepinsight'
+    DockerNamespace: 'picontreg'
+    DockerRepository: 'dockerfile'
