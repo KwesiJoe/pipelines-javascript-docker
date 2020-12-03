@@ -38,7 +38,7 @@ stages:
         tags: |
           $(tag)
 
-- task: AzureRmWebAppDeployment@4
+- task: AzureRmWebAppDeployment
   inputs:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Azure for Students(95738aeb-f6f0-4d14-b7be-d03aeb6588f1)'
